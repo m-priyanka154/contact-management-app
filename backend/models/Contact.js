@@ -21,6 +21,17 @@ const contactSchema = new mongoose.Schema(
     notes: {
       type: String,
     },
+    company: {
+      type: String,
+    },
+    tags: {
+      type: [String],
+      default: [],
+    },
+    favorite: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );

@@ -65,7 +65,7 @@ button:hover {
 
 /* Dashboard */
 .dashboard {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 40px auto;
   padding: 20px;
 }
@@ -77,11 +77,290 @@ button:hover {
   margin-bottom: 20px;
 }
 
+.top-bar h2 {
+  margin: 0;
+}
+
+.top-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-add,
+.btn-logout {
+  width: auto;
+  padding: 10px 20px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-add:hover,
+.btn-logout:hover {
+  background: #125ea8;
+}
+
 .contact-form {
   background: #fff;
-  padding: 16px;
+  padding: 20px;
   border-radius: 6px;
   margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.btn-submit {
+  width: auto;
+  padding: 10px 20px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background: #125ea8;
+}
+
+/* Table Styles */
+.table-wrapper {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  overflow: auto;
+}
+
+.contacts-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.contacts-table thead {
+  background: #f5f5f5;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.contacts-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+.contacts-table td {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.contacts-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.favorite-cell {
+  text-align: center;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  color: #e74c3c;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.2);
+}
+
+.actions-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-view,
+.btn-delete {
+  width: auto;
+  padding: 6px 12px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-view {
+  background: #1976d2;
+  color: #fff;
+}
+
+.btn-view:hover {
+  background: #125ea8;
+}
+
+.btn-delete {
+  background: #e74c3c;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background: #c0392b;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+}
+
+.pagination button {
+  width: auto;
+  padding: 8px 12px;
+  background: #fff;
+  color: #1976d2;
+  border: 1px solid #1976d2;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.pagination button.active {
+  background: #1976d2;
+  color: #fff;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.contact-stats {
+  padding: 10px 15px;
+  background: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+  font-size: 13px;
+  color: #666;
+  text-align: right;
+}
+
+.no-contacts {
+  padding: 30px;
+  text-align: center;
+  color: #999;
+}
+
+/* Contact Details Page */
+.contact-details-wrapper {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.back-button {
+  width: auto;
+  padding: 8px 16px;
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background: #e0e0e0;
+}
+
+.contact-details-container {
+  background: #fff;
+  padding: 24px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.contact-details-container h2 {
+  margin-top: 0;
+}
+
+.contact-details-container .form-group {
+  margin-bottom: 15px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-save,
+.btn-cancel {
+  width: auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-save {
+  background: #27ae60;
+  color: #fff;
+}
+
+.btn-save:hover {
+  background: #229954;
+}
+
+.btn-cancel {
+  background: #95a5a6;
+  color: #fff;
+}
+
+.btn-cancel:hover {
+  background: #7f8c8d;
 }
 
 .contact-list {

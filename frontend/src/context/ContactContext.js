@@ -45,13 +45,27 @@ export const ContactProvider = ({ children }) => {
     }
   };
 
+  const toggleFavorite = async (id) => {
+    try {
+      const contact = contacts.find((c) => c._id === id);
+      const res = await API.put(`/contacts/${id}`, { 
+        favorite: !contact.favorite 
+      });
+      setContacts(
+        contacts.map((c) => (c._id === id ? res.data : c))
+      );
+    } catch (err) {
+      setError("Failed to toggle favorite");
+    }
+  };
+
   useEffect(() => {
     getContacts();
   }, []);
 
   return (
     <ContactContext.Provider
-      value={{ contacts, addContact, deleteContact, updateContact, error }}
+      value={{ contacts, addContact, deleteContact, updateContact, toggleFavorite, error }}
     >
       {children}
     </ContactContext.Provider>
